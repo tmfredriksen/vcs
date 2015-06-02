@@ -21,8 +21,8 @@ class ldapLogin
 class ldapSearch
 {
 	public static $adServer 	= "ldap://hin-dc1.hin.no";
-	public static $bind_rdn		='HIN' . "\\" . "501757";
-	public static $password 	='Nakasakia09N'; //INSERT PASSWORD
+	public static $bind_rdn		='HIN' . "\\" . "";
+	public static $password 	=''; //INSERT PASSWORD
 	public static $filter 		= "(objectClass=*)";
 	
 	public static $HostnameAttr  = "samaccountname";
