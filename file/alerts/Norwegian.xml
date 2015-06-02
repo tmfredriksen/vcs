@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Because this document will be included into other documents,
+ * it is important to keep the encoding to UTF-8
+-->
+<alerts customer="norwegian"> kunden norwegian
+  <alert>
+    <sms oper="add" number="ONDUTY" level="3" />
+    <marval oper="add" />
+    <log oper="add" file="/var/log/nms/norwegian.log" level="DEFAULT" />
+  </alert>
+  <alert hostname="nmsalert01.osl.norwegian.net" subsystem="3.1.2.4.2" >
+    <log oper="override" file="/var/log/nms/bf_alarm_check.log" level="DEFAULT" />
+  </alert>
+  <alert hostname="foreman01.sth.basefarm.net">
+    <log oper="add" file="/var/log/nms/foreman-sth.log" level="DEFAULT" />
+    <sms oper="add" number="ONDUTY-SE" level="3" />
+    <marval oper="add" />
+  </alert>
+  <alert hostname="dc04.mgmt.norwegian.net dc03-mgmt.mgmt.basefarm.net">
+    <sms oper="add" number="ONDUTY" level="3" />
+    <marval oper="add" />
+    <email oper="add" address="andersns@basefarm.no" level="DEFAULT" />
+    <email oper="add" address="kimma@basefarm.no" level="DEFAULT" />
+    <log oper="add" file="/var/log/nms/basefarm.log" level="DEFAULT" />
+  </alert>
+</alerts>
+
+
+
+

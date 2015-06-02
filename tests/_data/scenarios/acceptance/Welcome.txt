@@ -1,0 +1,6 @@
+I WANT TO PERFORM ACTIONS AND SEE RESULT
+
+I am on page '/'
+I see ""Home""
+I am on page '/'
+I see ""Alert""

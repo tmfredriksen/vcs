@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<!-- Headerfil for alle sider-->
+<html>
+<head>		
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+	<link rel="shortcut icon" href="/bachelor2015/resources/favicon.ico" type="image/x-icon">
+	
+	<title>Basefarm config system</title>
+	<!-- stilark fra bootstrap -->
+	<link href="/bachelor2015/css/bootstrap.css" rel="stylesheet">
+	<link href="/bachelor2015/css/navbar.css" rel="stylesheet">
+	<link href="/bachelor2015/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/bachelor2015/css/signin.css" rel="stylesheet">
+	<link href="/bachelor2015/css/prettify.css" rel="stylesheet">
+	<link href="/bachelor2015/css/custom.css" rel="stylesheet">
+	
+	
+	<!-- stilark fra bootstrap eksempler -->
+	<!--<link href="css/jumbotron.css" rel="stylesheet"> -->
+	<!-- jquery script -->
+	<script src="/bachelor2015/js/jquery-1.11.2.js"></script>
+	<script src="/bachelor2015/js/prettify.js"></script>
+	
+	<script type="text/javascript">
+	  !function ($) {
+	    $(function(){
+	      window.prettyPrint && prettyPrint()   
+	    })
+	  }(window.jQuery)
+	</script>
+	
+</head>
+
+<body style="background-color:#f9f9f9">
+
+
+<div class="container">
+	<h2 class="form-signin-heading">Sign in before using</h2>
+	<label for="inputEmail" class="sr-only">Username</label> 
+	<input type="text" id="inputEmail" name="inputEmail" class="form-control"
+		placeholder="Username" required autofocus> 
+		<label for="inputPassword" class="sr-only">Password</label>
+	<input type="password" name="inputPassword" id="inputPassword" class="form-control"
+		placeholder="Password" required>
+	<div class="checkbox">
+		<label> <input type="checkbox" value="remember-me">
+			Remember me
+		</label>
+	</div>
+	<button class="btn btn-lg btn-primary btn-block" id="btnLogin" type="submit">Sign in</button>
+	
+</div>
+
+
+
+<script>
+
+
+$("#btnLogin").click(function(){
+
+	sessionStorage.setItem("LoggingIn","trying");
+
+
+	var username = $("#inputEmail").val();
+	var password = $("#inputPassword").val();
+	
+		var data =  { "username":username, "password":password };
+			$.ajax({
+				type: 'POST', 
+				contentType: "application/json",
+				url: '/bachelor2015/home/LoginWithLDAP',
+				dataType: "json", 		
+				data: JSON.stringify(data), 
+				success: function(response){
+		
+				window.location.href = "/bachelor2015/home/index";
+
+					
+				},
+				error : function(xhr, ajaxOptions, thrownError) {
+			    	  alert(thrownError);
+			      }
+	
+			});
+
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+
+
+
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<!--<div class="text-left">&#0169; EJS</div> -->
+	<script src="/bachelor2015/js/bootstrap.js"></script>
+</body>
+<footer>
+    <div class="navbar navbar-inverse navbar-fixed-bottom">
+        <div class="text-center">
+
+
+                <p></p>
+                <font size="2">
+            <span style="color:white"> <p>Basefarm &copy 2015 </p>
+                </span>
+                </font>
+        </div>
+    </div>
+</footer>
+</html>

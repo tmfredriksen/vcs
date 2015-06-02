@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<!-- Headerfil for alle sider-->
+<html>
+<head>		
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+	<link rel="shortcut icon" href="/bachelor2015/resources/favicon.ico" type="image/x-icon">
+	
+	<title>Basefarm config system</title>
+	<!-- stilark fra bootstrap -->
+	<link href="/bachelor2015/css/bootstrap.css" rel="stylesheet">
+	<link href="/bachelor2015/css/navbar.css" rel="stylesheet">
+	<link href="/bachelor2015/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/bachelor2015/css/signin.css" rel="stylesheet">
+	<link href="/bachelor2015/css/prettify.css" rel="stylesheet">
+	<link href="/bachelor2015/css/jquery-ui.css" rel="stylesheet">
+	<link href="/bachelor2015/css/custom.css" rel="stylesheet">
+	
+	<!-- stilark fra bootstrap eksempler -->
+	<!--<link href="css/jumbotron.css" rel="stylesheet"> -->
+	<!-- jquery script -->
+	<script src="/bachelor2015/js/jquery-1.11.2.js"></script>
+	<script src="/bachelor2015/js/prettify.js"></script>
+	<script src="/bachelor2015/js/jquery-ui.js"></script>
+	
+	<script type="text/javascript">
+	  !function ($) {
+	    $(function(){
+	      window.prettyPrint && prettyPrint()   
+	    })
+	  }(window.jQuery)
+	</script>
+	
+</head>
+
+<body style="background-color:#f9f9f9">
+
+
+<div class="container">
+	
+	<div class="page-header space" align="center">
+      	<h1>User login</h1>
+   	</div>
+	<div class="form-signin">
+		<input type="text" id="inputEmail" name="inputEmail" class="form-control" placeholder="Username" style="margin-bottom:10px" required autofocus> 
+		<input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
+		
+		<button class="btn btn-lg btn-info btn-block" id="btnLogin" type="submit"><h4>Sign in</h4></button>
+	</div>
+	<div class="col-md-8 col-md-offset-2">
+	<div id="alert" class="alert alert-warning alert-dismissible" role="alert" hidden="true">
+ 	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	</div>
+	</div>
+</div>
+
+
+
+<script>
+var go = document.getElementById("btnLogin");
+var txt = document.getElementById("inputPassword");
+
+txt.addEventListener("keypress", function() {
+    if (event.keyCode == 13) go.click();
+});
+
+$("#btnLogin").click(function(){
+	home.login();
+});
+
+</script>
+
+
+
+
+</body>
+<div class="container">
+<footer>
+    <div class="navbar navbar-default">
+        <div class="text-center" style="padding-top:15px">
+              <font size="2">
+          		<span>Basefarm &copy 2015</span>
+              </font>
+        </div>
+    </div>
+</footer>
+</div>
+
+<!-- Bootstrap core JavaScript
+   ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!--<div class="text-left">&#0169; EJS</div> -->
+<script src="/bachelor2015/js/bootstrap.js"></script>
+
+<!-- Custom javascript files containing scripts used around the page -->
+<script type="text/javascript" src="/bachelor2015/js/shared.js"></script>
+<script type="text/javascript" src="/bachelor2015/js/manualsource.js"></script>
+<script type="text/javascript" src="/bachelor2015/js/alert.js"></script>
+<script type="text/javascript" src="/bachelor2015/js/swatch.js"></script>
+<script type="text/javascript" src="/bachelor2015/js/home.js"></script>
+
+</html>

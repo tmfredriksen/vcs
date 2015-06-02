@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Because this document will be included into other documents,
+ * it is important to keep the encoding to UTF-8
+-->
+<alerts customer="altinn!"> kunden altinn
+  <alert>
+    <sms oper="add" number="ONDUTY" level="5" />
+    <marval oper="add" />
+    <log oper="add" file="/var/log/nms/altinn.log" level="2" />
+  </alert>
+  <alert hostname="nmsalert01.osl.altinn.net" subsystem="3.2.2.4.1" >
+    <log oper="override" file="/var/log/nms/bf_alarm_check.log" level="DEFAULT" />
+  </alert>
+  <alert hostname="foreman01.sth.altinn.net">
+    <log oper="add" file="/var/log/nms/foreman-sth.log" level="3" />
+    <sms oper="add" number="ONDUTY-NO" level="3" />
+    <marval oper="add1" />
+  </alert>
+  <alert hostname="dc04.mgmt.altinn.no dc03-mgmt.mgmt.altinn.net">
+    <sms oper="add" number="ONDUTY" level="3" />
+    <marval oper="add" />
+    <email oper="add" address="tord.fredriksen@gmail.com" level="DEFAULT" />
+    <email oper="add" address="kimma@altinn.no" level="2" />
+    <log oper="add" file="/var/log/nms/altinn.log" level="DEFAULT" />
+  </alert>
+</alerts>
