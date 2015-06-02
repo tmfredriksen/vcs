@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-06-01 10:26:58
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-06-02 11:09:43
          compiled from "C:\Users\Tord-MariusK\git\vcs\views\shared\modal.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:24887556c17529d1b01-14231661%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a08fdc81b3dbf2494dca71e159bd8978c137d1a0' => 
     array (
       0 => 'C:\\Users\\Tord-MariusK\\git\\vcs\\views\\shared\\modal.tpl',
-      1 => 1432889635,
+      1 => 1433236150,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
   'unifunc' => 'content_556c17529e3eb3_37256411',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_556c17529e3eb3_37256411')) {function content_556c17529e3eb3_37256411($_smarty_tpl) {?><!-- Modal -->
 	<div class="modal fade myModal" id="myModal" tabindex="-1" role="dialog"
@@ -156,7 +156,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			view.fillModal(this);
 		});
 		$(".myModal").keydown(function (e){
-			if (e.which == 116 || e.which == 17) {
+			if (e.which == 116) {
 			    return false; 
 		   }
 		});
