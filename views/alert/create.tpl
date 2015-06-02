@@ -62,7 +62,7 @@ $('#filename').keyup(function(){
 	});
 });
 $('#settings').click(function(){
-	window.location = '/vcs/alert/settings';
+	window.location = '/bachelor2015/alert/settings';
 });
 $('#addBrackets').click(function(){
 	createAlert.addBrackets();
@@ -97,7 +97,7 @@ $("#filename").keyup(function() {
 	}
 });
 $(".container").keydown(function (e){
-	if (e.which == 116 || e.which == 17) {
+	if (e.which == 116) {
 	   if (confirm("Are you sure you want refresh the page? all data will be lost!") == true) {   
 	   }
 	   else {

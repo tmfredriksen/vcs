@@ -134,7 +134,7 @@
 			view.fillModal(this);
 		});
 		$(".myModal").keydown(function (e){
-			if (e.which == 116 || e.which == 17) {
+			if (e.which == 116) {
 			    return false; 
 		   }
 		});

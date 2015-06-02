@@ -94,7 +94,7 @@
 
 </div>
 {literal}
-<script type="text/javascript" src="/vcs/js/jquery-1.11.2.js"></script>
+<script type="text/javascript" src="/bachelor2015/js/jquery-1.11.2.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
 	//##### send add record Ajax request to response.php #########
@@ -124,7 +124,7 @@ $(document).ready(function() {
 		}
 	});
 	$(".container").keydown(function (e){
-		if (e.which == 116 || e.which == 17) {
+		if (e.which == 116) {
 		   if (confirm("Are you sure you want refresh the page? all data will be lost!") == true) {   
 		   }
 		   else {
